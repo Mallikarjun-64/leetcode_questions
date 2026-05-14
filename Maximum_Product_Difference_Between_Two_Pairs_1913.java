@@ -1,3 +1,4 @@
+import java.util.*;
 class Solution {
     public int maxProductDifference(int[] nums) {
         Arrays.sort(nums);
