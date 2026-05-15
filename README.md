@@ -4,62 +4,82 @@ This folder contains various LeetCode problem solutions implemented in Java. Eac
 
 ## 🚀 How to Use These Solutions
 
-To test or run any of the solutions in this repository, follow these steps:
+You have two ways to run these programs:
 
-### 1. Create a Java File
-Create a new file named `Solution.java` in your local environment.
+### Option 1: Create a `Solution.java` file
+1. Create a new file named `Solution.java`.
+2. Copy the method logic from the problem file (e.g., `TwoSum_1.java`) into `Solution.java`.
+3. Add a `main` method to pass values and test the logic.
 
-### 2. Copy the Code
-Open the desired problem file (e.g., `TwoSum_1.java`) and copy the logic into your `Solution.java` file. 
-
-> [!NOTE]
-> Make sure the class name in your code matches the filename (`Solution`).
-
-### 3. Add a Main Method
-Since most of these files contain only the solution logic, you will need to add a `main` method to pass sample values and print the results.
+### Option 2: Run the existing file directly
+1. Open the problem file.
+2. **Rename the class** inside the file to match the filename exactly.
+3. Add a `main` method inside that class to test it.
 
 ---
 
-## 📝 Example Walkthrough
+## 📝 Example Walkthrough (using Two Sum)
 
-If you want to run the **Two Sum** solution:
-
-1. **Create `Solution.java`**
-2. **Paste and modify the code as follows:**
+### Method 1: Creating a new `Solution.java`
+If you want to create a fresh file for testing:
 
 ```java
+// File: Solution.java
 public class Solution {
-    // Paste the method logic here
     public int[] twoSum(int[] nums, int target) {
-        int[] arr1 = new int[2];
+        int[] result = new int[2];
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target) {
-                    arr1[0] = i;
-                    arr1[1] = j;
+                    result[0] = i;
+                    result[1] = j;
                 }
             }
         }
-        return arr1;
+        return result;
     }
 
-    // Add the main method to pass values
     public static void main(String[] args) {
         Solution sol = new Solution();
         int[] nums = {2, 7, 11, 15};
-        int target = 9;
-        
-        int[] result = sol.twoSum(nums, target);
-        
-        System.out.println("Indices: [" + result[0] + ", " + result[1] + "]");
+        int[] res = sol.twoSum(nums, 9);
+        System.out.println("Indices: [" + res[0] + ", " + res[1] + "]");
     }
 }
 ```
 
-3. **Compile and Run:**
+### Method 2: Renaming Class in existing file
+If you are using `TwoSum_1.java`:
+
+1. **Ensure the class name matches the filename:**
+   ```java
+   // Inside TwoSum_1.java
+   class TwoSum_1 { // <--- Must match 'TwoSum_1.java'
+       public int[] twoSum(int[] nums, int target) {
+             int[] result = new int[2];
+        for (int i = 0; i < nums.length - 1; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target) {
+                    result[0] = i;
+                    result[1] = j;
+                }
+            }
+        }
+        return result;
+       }
+
+       public static void main(String[] args) {
+           TwoSum_1 obj = new TwoSum_1();
+           int[] res = obj.twoSum(new int[]{2, 7}, 9);
+           System.out.println("Result: " + res[0] + ", " + res[1]);
+       }
+   }
+   ```
+
+2. **Compile and Run:**
    ```bash
-   javac Solution.java
-   java Solution
+   javac TwoSum_1.java
+   java TwoSum_1
    ```
 
 ---
