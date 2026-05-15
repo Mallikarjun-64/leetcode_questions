@@ -9,6 +9,5 @@ class Solution {
         String s2=new String(arr1);
 
         return s1.equals(s2);
-
     }
 }
