@@ -56,7 +56,7 @@ If you are using `TwoSum_1.java`:
    // Inside TwoSum_1.java
    class TwoSum_1 { // <--- Must match 'TwoSum_1.java'
        public int[] twoSum(int[] nums, int target) {
-             int[] result = new int[2];
+        int[] result = new int[2];
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target) {
@@ -66,7 +66,8 @@ If you are using `TwoSum_1.java`:
             }
         }
         return result;
-       }
+    }
+
 
        public static void main(String[] args) {
            TwoSum_1 obj = new TwoSum_1();
