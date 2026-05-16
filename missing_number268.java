@@ -5,6 +5,7 @@ class Solution {
         int cursum=0;
         int i;
 
+
         for(i =0;i<nums.length;i++){
             cursum+=nums[i];
         }return sum-cursum;
