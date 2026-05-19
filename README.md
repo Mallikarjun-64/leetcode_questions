@@ -1,5 +1,7 @@
 # LeetCode Solutions Repository
 
+👤 **Profile:** [mallikarjunsk64 on LeetCode](https://leetcode.com/u/mallikarjunsk64/)
+
 This folder contains various LeetCode problem solutions implemented in Java. Each file corresponds to a specific problem, named according to the problem title and ID.
 
 ## 🚀 How to Use These Solutions
