@@ -1,3 +1,4 @@
+import java.util.Arrays;
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
       int n=nums1.length;
@@ -17,4 +18,10 @@ class Solution {
       }
       return (arr[arr.length/2-1]+arr[arr.length/2])/2.0;
     }
+    public static void main(String[] args) {
+        Solution s =new Solution();
+        double r= s.findMedianSortedArrays(new int[] {2,4,5}, new int[] {6,7,8});
+        System.out.println(r);
+    }
+    
 }
