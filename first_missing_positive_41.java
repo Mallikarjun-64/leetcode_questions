@@ -9,7 +9,7 @@ class Solution {
         for(int i=1;i<=nums.length;i++){
             if(!set.contains(i)){
                 return i;
-            }
+          }
         }return nums[nums.length-1]+1;
     }
 }
